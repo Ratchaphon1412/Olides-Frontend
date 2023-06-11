@@ -32,7 +32,7 @@ onMounted(() => {
                             clip-rule="evenodd"></path>
                     </svg></button>
                 <div id="dropdown"
-                    class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                    class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44"
                     style="background: rgba(255, 255, 255, 0.32); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(6.1px); -webkit-backdrop-filter: blur(6.1px);">
                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
                         <li>
@@ -125,7 +125,7 @@ onMounted(() => {
                                 clip-rule="evenodd"></path>
                         </svg></button>
                     <div id="dropdown"
-                        class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                        class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44"
                         style="background: rgba(255, 255, 255, 0.32); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(6.1px); -webkit-backdrop-filter: blur(6.1px);">
                         <ul class="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
                             <li>
