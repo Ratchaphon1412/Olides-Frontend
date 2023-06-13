@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <Landing/>
+
+  <P class="h-[200px]"></P>
 </template>
 
 <style></style>
