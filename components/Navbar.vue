@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <nav class="border-gray-200" id="glass">
+    <nav class="border-gray-200 bg-white">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- show logo and banners-->
             <a href="#" class="flex items-center">
@@ -34,7 +34,7 @@ onMounted(() => {
                 <div id="dropdown"
                     class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44"
                     style="background: rgba(255, 255, 255, 0.32); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(6.1px); -webkit-backdrop-filter: blur(6.1px);">
-                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                    <ul class="py-2 text-sm ztext-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
                         <li>
                             <button type="button"
                                 class="inline-flex w-full px-4 py-2">Mockups</button>
@@ -265,11 +265,5 @@ onMounted(() => {
             </ul>
         </div>
     </div>
-</nav></template>
-
-<style scoped>#glass {
-    background: rgba(255, 255, 255, 0);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-}</style>
+</nav>
+</template>
