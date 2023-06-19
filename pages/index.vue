@@ -2,7 +2,9 @@
 
 <template>
   <Navbar/>
-  
+  <Landing/>
+  <Slide/>
+  <Shortstore/>
 </template>
 
 <style>
