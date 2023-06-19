@@ -1,7 +1,14 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <Navbar/>
+  
 </template>
 
-<style></style>
+<style>
+body{
+  background-image: url('@/assets/css/images/Main_Search.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+</style>
