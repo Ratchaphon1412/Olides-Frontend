@@ -5,6 +5,7 @@
   <Landing/>
   <Slide/>
   <Shortstore/>
+  <Footer/>
 </template>
 
 <style>
