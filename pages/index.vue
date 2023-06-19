@@ -2,8 +2,8 @@
 
 <template>
   <Landing/>
-
-  <P class="h-[200px]"></P>
+  <Slide/>
+  <Shortstore/>
 </template>
 
 <style></style>

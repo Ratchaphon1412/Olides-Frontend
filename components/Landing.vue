@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="grid content-center h-screen bg-no-repeat bg-fixed bg-cover" id="background">
+    <div class="grid content-center h-[50vh] bg-no-repeat bg-fixed bg-cover bg-bottom" id="background">
         <div class="mx-10 text-center lg:w-[1000px] lg:mx-auto" id="glass">
             <p class="text-4xl font-bold mt-5 mx-auto">Lorem ipsum Neque porro</p>
             <p class="text-center mx-auto my-5 lg:w-[450px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -81,7 +81,8 @@ onMounted(() => {
     </div>
 </template>
 
-<style scoped>#background {
+<style scoped>
+#background {
     background-image: url('@/assets/css/images/Main_Search.png');
 }
 
