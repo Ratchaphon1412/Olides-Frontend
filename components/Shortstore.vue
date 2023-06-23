@@ -1,6 +1,6 @@
 <template>
     <main class="bg-white py-32 px-4">
-        <section class="text-center mb-10">
+        <section class="text-center mb-5">
             <div class="mx-auto text-gray-900 text-xl md:w-[400px] mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             <div class="mx-auto text-gray-800 text-md md:w-[575px] mb-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat vero officiis, corporis hic omnis inventore quos rerum, repudiandae voluptatem adipisci, necessitatibus expedita reprehenderit. Mollitia fuga nisi voluptatem voluptas saepe tempore.</div>
         </section>
@@ -14,7 +14,8 @@
                 <div class="p-5">
                     
                     <span class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Heading M</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="37" fill="currentColor" class="bi bi-bookmark-fill float-right" viewBox="0 0 16 16"> <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/> </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="37" fill="currentColor" class="bi bi-bookmark float-right" viewBox="0 0 16 16"> <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/> </svg>
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="27" height="37" fill="currentColor" class="bi bi-bookmark-fill float-right" viewBox="0 0 16 16"> <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/> </svg> -->
 
                     <!-- star 5.0 -->
                     <div class="flex items-start text-[#2D3648]">

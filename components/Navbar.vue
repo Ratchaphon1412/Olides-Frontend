@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <nav class="border-gray-200 bg-white">
+    <nav class="border-gray-200 bg-white sticky top-0 z-10">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <!-- show logo and banners-->
             <a href="#" class="flex items-center">

@@ -5,10 +5,12 @@
   <Landing/>
   <Slide/>
   <Shortstore/>
+
+  <Platfrom/>
   <Footer/>
 </template>
 
-<style>
+<style scoped>
 body{
   background-image: url('@/assets/css/images/Main_Search.png');
   background-size:cover;
