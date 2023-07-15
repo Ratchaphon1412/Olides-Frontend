@@ -1,13 +1,8 @@
-<script setup>
-import { ref } from 'vue';
-
-const num = ref(6);
-</script>
 <template>
-    <div class="relative h-[300px] min-w-[191px] lg:min-w-[381px] duration-50 bg-cover bg-center rounded-3xl mr-12" id="background" v-for="n in num">
-        <div class="absolute bottom-0 left-0 rounded-3xl px-10" id="linear">
-            <p class="text-[#ffffff] text-4xl font-extrabold mb-3">Lorem</p>
-            <p class="text-[#ffffff] mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, atque repellendus
+    <div class="relative h-[300px] min-w-[191px] lg:min-w-[381px] duration-50 bg-cover bg-center rounded-3xl mr-12" id="background">
+        <div class="absolute bottom-0 left-0 rounded-3xl px-10" id="linear" >
+            <p class="text-Light text-4xl font-extrabold mb-3">Lorem</p>
+            <p class="text-Light mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, atque repellendus
                 magni</p>
         </div>
     </div>

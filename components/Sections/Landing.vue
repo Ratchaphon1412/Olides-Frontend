@@ -9,10 +9,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="grid content-center h-[50vh] bg-no-repeat bg-fixed bg-cover bg-bottom" id="background">
-        <div class="mx-10 text-center lg:w-[1000px] lg:mx-auto" id="glass">
-            <p class="text-4xl font-bold mt-5 mx-auto">Lorem ipsum Neque porro</p>
-            <p class="text-center mx-auto my-5 lg:w-[450px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    <div class="grid content-center h-[50vh] bg-no-repeat bg-fixed bg-cover bg-bottom " id="background">
+        <div class="mx-10 text-center lg:w-3/5 lg:mx-auto" id="glass">
+            <p class="text-4xl font-bold mt-5 mx-auto text-Dark">Lorem ipsum Neque porro</p>
+            <p class="text-center mx-auto my-5 lg:w-[450px] text-DarkGray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor exercitation</p>
 
             <!-- show search -->
@@ -21,15 +21,15 @@ onMounted(() => {
                     <div class="flex">
                         <!-- search -->
                             <input type="search" id="search-dropdown"
-                                class="block p-2.5 w-full z-20 text-sm text-gray-900 rounded-l-full border-l-2 border"
+                                class="block p-2.5 w-full z-20 text-sm text-Dark rounded-l-full border-l-2 border"
                                 style="background: rgba(255, 255, 255, 0.35); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 3px solid rgba(255, 255, 255, 0.3);" 
                                 placeholder="Search" required>
                                 
                             <!-- dropdown -->
-                            <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only">Your
+                            <label for="search-dropdown" class="mb-2 text-sm font-medium text-Dark sr-only">Your
                                 Email</label>
                             <button id="dropdown-button" data-dropdown-toggle="dropdown"
-                                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-gray-900 focus:outline-none text-left"
+                                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-Dark focus:outline-none text-left"
                                 style="background: rgba(255, 255, 255, 0.35); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 3px solid rgba(255, 255, 255, 0.3);"
                                 type="button">
                                     Location 
@@ -42,24 +42,24 @@ onMounted(() => {
                             </button>
 
                             <div id="dropdown"
-                                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+                                class="z-10 hidden bg-Light divide-y divide-Light rounded-lg shadow w-44"
                                 style="background: rgba(255, 255, 255, 0.35); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 3px solid rgba(255, 255, 255, 0.3);">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
                                     <li>
                                         <button type="button"
-                                            class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Location</button>
+                                            class="inline-flex w-full px-4 py-2 hover:bg-Light">Location</button>
                                     </li>
                                     <li>
                                         <button type="button"
-                                            class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Location</button>
+                                            class="inline-flex w-full px-4 py-2 hover:bg-Light">Location</button>
                                     </li>
                                     <li>
                                         <button type="button"
-                                            class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Location</button>
+                                            class="inline-flex w-full px-4 py-2 hover:bg-Light">Location</button>
                                     </li>
                                     <li>
                                         <button type="button"
-                                            class="inline-flex w-full px-4 py-2 hover:bg-gray-100">Location</button>
+                                            class="inline-flex w-full px-4 py-2 hover:bg-Light">Location</button>
                                     </li>
                                 </ul>
                             </div>
@@ -84,6 +84,7 @@ onMounted(() => {
 <style scoped>
 #background {
     background-image: url('@/assets/css/images/Main_Search.png');
+    height: 487px;
 }
 
 #glass {

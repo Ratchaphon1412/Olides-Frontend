@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
   modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', 'nuxt-icon'],
+
   pinia: {
     autoImports: [
       // automatically imports `defineStore`
@@ -18,4 +19,12 @@ export default defineNuxtConfig({
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
   },
+
+  runtimeConfig:{
+    public:{
+      URL_ENDPOINT: process.env.URL_ENDPOINT
+    }
+  },
+
+  plugins: ['~/plugins/api_instance.ts']
 })

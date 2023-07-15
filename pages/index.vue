@@ -1,19 +1,20 @@
 <script setup lang="ts"></script>
 
 <template>
-  <Navbar />
-  <SectionsLanding />
-  <Slide />
-  <Shortstore />
-
-  <Platfrom />
-  <Footer />
+  <NuxtLayout>
+    <SectionsLanding />
+    <SectionsSlide />
+    <SectionsShortstore />
+  
+    <SectionsPlatfrom />
+    <SectionsReview />
+  </NuxtLayout>
 </template>
 
 <style scoped>
-body {
+/* body {
   background-image: url("@/assets/css/images/Main_Search.png");
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 </style>
