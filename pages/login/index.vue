@@ -12,11 +12,11 @@ let email = ref("")
 let password = ref("")
 
 const { login } = authStore()
-
 async function sendData(){
   login(email.value, password.value);
   await navigateTo('/login/'+email.value);
 }
+
 </script>
 
 <template>

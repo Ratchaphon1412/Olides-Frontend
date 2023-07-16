@@ -1,5 +1,6 @@
 export const authStore =defineStore('authStore',() => {
     let token = ref("");
+    let access = ref("");
 
     // ฟังชั่นที่รับมาเก็บใน store refreanh token 
     function register(email:string, user:string, password:string){
@@ -12,8 +13,8 @@ export const authStore =defineStore('authStore',() => {
         });
 
         axios_instance.post('/api/register/',data=data)
-        .then(function (response) {
-            console.log(response)
+        .then(async function (response) {
+            console.log(response.data)
         })
         .catch(function (error) {
             console.log(error);
@@ -30,7 +31,11 @@ export const authStore =defineStore('authStore',() => {
 
         axios_instance.post('/api/login/',data=data)
         .then(function (response) {
-            console.log(response)
+            token.value = response.data.refresh
+            access.value = response.data.access
+
+            console.log(token.value)
+            console.log(access.value)
         })
         .catch(function (error) {
             console.log(error);
@@ -52,5 +57,7 @@ export const authStore =defineStore('authStore',() => {
         });
     }
 
-    return {register, verify, login}
+    return {register, verify, login, token, access}
+},{
+    persist: true
 })
