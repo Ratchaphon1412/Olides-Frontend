@@ -8,20 +8,18 @@ onMounted(() => {
   initFlowbite();
 });
 
-let email = ref("")
-let password = ref("")
+let email = ref("");
+let password = ref("");
 
-const { login } = authStore()
-async function sendData(){
-  login(email.value, password.value);
-  await navigateTo('/login/'+email.value);
+const { login } = authStore();
+async function sendData() {
+  await login(email.value, password.value);
+  await navigateTo(email.value);
 }
-
 </script>
 
 <template>
   <NuxtLayout>
-
     <main class="flex-col md:grid md:grid-cols-2 bg-Light">
       <img
         src="@/assets/css/images/backgroundLogin.png"
@@ -54,14 +52,15 @@ async function sendData(){
           >
         </div>
         <!-- input box-->
-  
+
         <form class="w-5/6 md:w-3/6 self-center" @submit.prevent="sendData">
           <!-- username -->
           <div class="mb-6">
             <input
               id="username"
               class="shadow-sm border border-Dark bg-Light text-Dark text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
-              placeholder="email" v-model="email"
+              placeholder="email"
+              v-model="email"
               required
             />
           </div>
@@ -70,7 +69,8 @@ async function sendData(){
             <input
               type="password"
               class="shadow-sm border border-Dark bg-Light text-Dark text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
-              placeholder="password" v-model="password"
+              placeholder="password"
+              v-model="password"
               required
             />
           </div>
@@ -89,7 +89,7 @@ async function sendData(){
                 >Remember me</label
               >
             </div>
-  
+
             <!-- model popup for forgive the password -->
             <button
               data-modal-target="popup-modal"
@@ -99,16 +99,14 @@ async function sendData(){
             >
               Forget your password?
             </button>
-  
+
             <div
               id="popup-modal"
               tabindex="-1"
               class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
             >
               <div class="relative w-full max-w-md max-h-full">
-                <div
-                  class="relative bg-Light rounded-2xl shadow"
-                >
+                <div class="relative bg-Light rounded-2xl shadow">
                   <!-- close the menu -->
                   <button
                     type="button"
@@ -132,9 +130,7 @@ async function sendData(){
                   </button>
                   <!-- in the menu -->
                   <div class="p-6">
-                    <h3
-                      class="mb-5 text-2xl font-semibold text-Dark"
-                    >
+                    <h3 class="mb-5 text-2xl font-semibold text-Dark">
                       Recover Password
                     </h3>
                     <p class="text-left w-[50vh] mb-5">
@@ -160,7 +156,7 @@ async function sendData(){
               </div>
             </div>
           </div>
-  
+
           <!-- bottom to submit -->
           <button
             type="submit"
