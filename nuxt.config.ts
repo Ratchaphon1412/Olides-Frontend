@@ -10,7 +10,14 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', 'nuxt-icon','nuxt-permissions'],
+  modules: [
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
+    '@vueuse/nuxt',
+    'nuxt-icon',
+    'nuxt-permissions',
+    '@unlazy/nuxt',
+  ],
 
   pinia: {
     autoImports: [
