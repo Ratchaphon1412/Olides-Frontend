@@ -25,12 +25,12 @@ module.exports = {
       Warning: '#FFDC00'
     },
     fontFamily:{
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Open Sans', 'sans-seri'],
     } 
   },
   plugins: [
     require('flowbite/plugin'),
-    require("daisyui")
+    
   ],
 }
 
