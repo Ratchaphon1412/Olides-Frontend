@@ -15,6 +15,7 @@ module.exports = {
       Primary: '#39CCCC',
       Secondary: '#001F3F',
       Dark: '#101529',
+      SuperDark: "#000000",
       OceanLight: '#D1F5FF',
       Ocean: '#0074D9',
       Light: '#FFFFFF',

@@ -8,38 +8,47 @@ onMounted(() => {
   initFlowbite();
 });
 
+const { login,loginGoogle } = authStore()
+
 let email = ref("")
 let password = ref("")
+// password
+let open_password = ref("")
+open_password.value = "password"
+let open_image = ref("")
+open_image.value = "/_nuxt/assets/css/images/eye-svgrepo.png"
 
-const { login } = authStore()
+const google = loginGoogle();
+
+function open(){
+  if(open_password.value === "password"){
+    open_password.value = "text"
+    open_image.value = "/_nuxt/assets/css/images/eye-closed-svgrepo.png"
+  }else{
+    open_password.value = "password"
+    open_image.value = "/_nuxt/assets/css/images/eye-svgrepo.png"
+  }
+}
+
 async function sendData(){
   login(email.value, password.value);
   await navigateTo('/login/'+email.value);
 }
-
 </script>
 
 <template>
   <NuxtLayout>
-
+    <!-- box of login image and tag login -->
     <main class="flex-col md:grid md:grid-cols-2 bg-Light">
-      <img
-        src="@/assets/css/images/backgroundLogin.png"
-        alt=""
-        class="h-screen w-full"
-      />
-      <section class="flex flex-col justify-center">
+      <section class="flex flex-col justify-center h-screen w-[65%] mx-auto md:w-full">
         <p class="text-3xl text-Dark font-bold text-center mb-5">Login</p>
         <!-- logo -->
         <div class="flex justify-around md:justify-center">
-          <a href="#">
-            <Icon name="logos:google-icon" class="w-[30px] h-[30px]" />
+          <a :href="google">
+            <Icon name="logos:google-icon" class="w-[30px] h-[30px]"  />
           </a>
           <a href="#">
-            <Icon
-              name="logos:facebook"
-              class="w-[30px] h-[30px] md:mr-20 md:ml-20"
-            />
+            <Icon name="logos:facebook" class="w-[30px] h-[30px] md:mr-20 md:ml-20"/>
           </a>
           <a href="#">
             <Icon name="logos:apple" class="w-[30px] h-[30px]" />
@@ -60,19 +69,20 @@ async function sendData(){
           <div class="mb-6">
             <input
               id="username"
-              class="shadow-sm border border-Dark bg-Light text-Dark text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
+              class="shadow-sm border border-Dark bg-Light text-Dark text-sm rounded-full block w-full p-2.5 focus:ring-5 focus:ring-SuperDark focus:outline-offset-2"
               placeholder="email" v-model="email"
               required
             />
           </div>
           <!-- password -->
-          <div class="mb-6">
-            <input
-              type="password"
-              class="shadow-sm border border-Dark bg-Light text-Dark text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
-              placeholder="password" v-model="password"
-              required
-            />
+          <div class="mb-6 relative flex">
+              <input
+                :type="open_password"
+                class="shadow-sm border border-Dark bg-Light text-Dark text-sm rounded-full block w-full p-2.5 focus:outline-0 focus:outline-offset-2 focus:outline-SuperDark"
+                placeholder="password" v-model="password"
+                required
+              />
+              <img :src="open_image" @click="open" class="absolute cursor-pointer w-5 h-5 my-auto inset-y-0 right-3"/>
           </div>
           <!-- remember me -->
           <div class="flex items-center mb-4 justify-between">
@@ -94,7 +104,7 @@ async function sendData(){
             <button
               data-modal-target="popup-modal"
               data-modal-toggle="popup-modal"
-              class="text-Primary no-underline px-5 py-2.5 text-center"
+              class="text-Primary no-underline text-right"
               type="button"
             >
               Forget your password?
@@ -164,7 +174,7 @@ async function sendData(){
           <!-- bottom to submit -->
           <button
             type="submit"
-            class="text-Light bg-Primary focus:ring-4 focus:outline-none focus:ring-Primary font-medium rounded-full text-sm px-5 py-2.5 text-center w-full"
+            class="text-Light bg-Primary hover:ring-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-full"
           >
             Login
           </button>
@@ -186,6 +196,12 @@ async function sendData(){
           </p>
         </div>
       </section>
+
+      <img
+        src="@/assets/css/images/backgroundLogin.png"
+        alt=""
+        class="h-[65vh] md:h-screen w-full md:order-first"
+      />
     </main>
   </NuxtLayout>
 </template>
