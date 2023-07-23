@@ -3,9 +3,9 @@
 <template>
   <NuxtLayout>
     <SectionsLanding />
-    <SectionsSlide />
+    <SectionsSlideCategory />
     <SectionsShortstore />
-  
+
     <SectionsPlatfrom />
     <SectionsReview />
   </NuxtLayout>
