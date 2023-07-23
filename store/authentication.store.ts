@@ -4,6 +4,7 @@ export const authStore =defineStore('authStore',() => {
     let access = ref("");
     let user = ref(null);
     let isAuth = ref(false);
+    let veridate = ref("");
 
     // ฟังชั่นที่รับมาเก็บใน store refreanh token 
     function register(email:string, user:string, password:string){
@@ -49,8 +50,10 @@ export const authStore =defineStore('authStore',() => {
         });
 
         axios_instance.post('/api/verify/email/',data=data)
-        .then(async function (response) {
-            await alert(JSON.stringify(response.data))
+        .then(function (response) {
+            // console.log(typeof(response.status))
+            veridate.value = response.status + ""
+            // veridate.value = 404 + ""
         })
         .catch(function (error) {
             console.log(error);
@@ -101,7 +104,12 @@ export const authStore =defineStore('authStore',() => {
         return access.value
     }
 
-    return {register, verify, login,user,refreshAccessToken,getIsAuth,getAccessToken}
+    
+    function loginGoogle(){
+        const config = useRuntimeConfig();
+        return config.public.URL_ENDPOINT + '/api/auth/google'
+    }
+    return {register, verify, login,user,refreshAccessToken,getIsAuth,getAccessToken, veridate, loginGoogle,me}
 },{
     persist:{
             key:'OldiesAuthStore', // ชื่อ key ที่จะเก็บใน localstorage
