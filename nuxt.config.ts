@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   },
 
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', 'nuxt-icon'],
+  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt', 'nuxt-icon','nuxt-permissions'],
 
   pinia: {
     autoImports: [
@@ -26,5 +26,5 @@ export default defineNuxtConfig({
     }
   },
 
-  plugins: ['~/plugins/api_instance.ts']
+  plugins: ['~/plugins/api_instance.ts', '~/plugins/carousel.ts'],
 })
