@@ -22,7 +22,7 @@ let showPasswordToggle = ref(false);
 
 async function sendData() {
   await login(email.value, password.value);
-  await navigateTo(email.value);
+  await navigateTo("/");
 }
 
 function open() {

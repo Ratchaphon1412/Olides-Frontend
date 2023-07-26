@@ -1,10 +1,10 @@
 import { parse, stringify } from 'zipson'
 export const authStore =defineStore('authStore',() => {
-    let refresh = ref("");
-    let access = ref("");
+    let refresh = ref();
+    let access = ref();
     let user = ref(null);
     let isAuth = ref(false);
-    let veridate = ref("");
+    let veridate = ref();
 
     // ฟังชั่นที่รับมาเก็บใน store refreanh token 
     function register(email:string, user:string, password:string){
@@ -97,14 +97,21 @@ export const authStore =defineStore('authStore',() => {
         })
     }
 
-    function getIsAuth(){
-        return isAuth.value
-    }
+
     function getAccessToken(){
         return access.value
     }
 
-    return {register, verify, login,user,refreshAccessToken,getIsAuth,getAccessToken, veridate,me}
+    function signOut(){
+        refresh.value = ""
+        access.value = ""
+        user.value = null
+        isAuth.value = false
+        veridate.value = false
+
+    }
+
+    return {register, verify, login,user,refreshAccessToken,getAccessToken, veridate,me,isAuth,signOut}
 },{
     persist:{
             key:'OldiesAuthStore', // ชื่อ key ที่จะเก็บใน localstorage
