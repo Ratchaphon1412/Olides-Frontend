@@ -5,8 +5,12 @@ import { initFlowbite } from "flowbite";
 import { authStore } from "~/store/authentication.store";
 // initialize components based on data attribute selectors
 
-const { login, loginGoogle } = authStore();
-const google = loginGoogle();
+const { login } = authStore();
+const google = () => {
+  navigateTo(useRuntimeConfig().public.URL_ENDPOINT + "/api/auth/google/",{
+    external: true
+  })
+};
 onMounted(() => {
   initFlowbite();
 });
@@ -41,9 +45,9 @@ function open() {
         <p class="text-3xl text-Dark font-bold text-center mb-5">Login</p>
         <!-- logo -->
         <div class="flex justify-around md:justify-center">
-          <a :href="google">
+          <div @click="google">
             <Icon name="logos:google-icon" class="w-[30px] h-[30px]" />
-          </a>
+          </div>
           <a href="#">
             <Icon
               name="logos:facebook"

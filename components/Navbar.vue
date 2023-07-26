@@ -297,7 +297,7 @@ onMounted(() => {
             <button
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
-              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-Dark text-sm rounded hover:bg-Light lg:hover:bg-transparent lg:border-0 lg:p-0 lg:w-auto"
+              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-Dark text-sm rounded hover:bg-Light lg:hover:bg-transparent lg:hover:ring-1 lg:border-0 lg:p-0 lg:w-auto"
             >
               <Icon name="flag:us-4x3" class="h-[20px] w-[20px] mr-2" /> English
               (US)
@@ -354,7 +354,7 @@ onMounted(() => {
             <button
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
-              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-Dark text-sm rounded lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto"
+              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-Dark text-sm rounded lg:hover:bg-transparent lg:border-0 lg:p-0 lg:w-auto"
             >
               <Icon
                 name="ant-design:dollar-outlined"
@@ -411,20 +411,23 @@ onMounted(() => {
 
           <li class="mt-1">
             <NuxtLink
-              href="/login"
-              class="block py-2 pl-3 pr-4 text-Dark rounded hover:bg-Light lg:hover:bg-transparent lg:border-0 lg:p-0"
+              to="/login"
+              class="block py-2 pl-3 pr-4 text-Dark rounded hover:bg-Light lg:hover:bg-transparent lg:border-0 lg:p-0 hover:ring-1"
               >Login</NuxtLink
             >
           </li>
 
           <li>
-            <button
-              type="button"
-              class="text-white bg-Primary focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0"
-            >
-              Create Account
-            </button>
+            <NuxtLink to="/register">
+              <button
+                type="button"
+                class="text-white bg-Primary focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0"
+              >
+                Create Account
+              </button>
+            </NuxtLink>
           </li>
+
         </ul>
       </div>
     </div>

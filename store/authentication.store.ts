@@ -104,12 +104,7 @@ export const authStore =defineStore('authStore',() => {
         return access.value
     }
 
-    
-    function loginGoogle(){
-        const config = useRuntimeConfig();
-        return config.public.URL_ENDPOINT + '/api/auth/google'
-    }
-    return {register, verify, login,user,refreshAccessToken,getIsAuth,getAccessToken, veridate, loginGoogle,me}
+    return {register, verify, login,user,refreshAccessToken,getIsAuth,getAccessToken, veridate,me}
 },{
     persist:{
             key:'OldiesAuthStore', // ชื่อ key ที่จะเก็บใน localstorage

@@ -4,6 +4,7 @@
     // ส่งเข้า store แล้วยิงใส่ verify email บอก user ว่า verify แล้ว redirect ไปที่หน้า login
     const { token } = useRoute().params
     const { verify,veridate } = authStore()
+
     
     verify(token)
     

@@ -68,8 +68,7 @@ function open() {
           <div class="mb-6">
             <input
               type="email"
-              id="email"
-              class="shadow-sm border border-black text-Dark bg-Light text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
+              class="shadow-sm border border-black text-Dark bg-Light text-sm rounded-full w-full p-2.5"
               placeholder="your@gmail.com"
               v-model="email"
               required
@@ -78,8 +77,8 @@ function open() {
           <!-- username -->
           <div class="mb-6">
             <input
-              id="username"
-              class="shadow-sm border border-black text-Dark bg-Light text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
+              type="text"
+              class="shadow-sm border border-black text-Dark bg-Light text-sm rounded-full w-full p-2.5"
               placeholder="username"
               v-model="user"
               required
@@ -89,7 +88,7 @@ function open() {
           <div class="mb-6 relative flex">
             <input
               :type="typepassword"
-              class="shadow-sm border border-black text-Dark bg-Light text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
+              class="shadow-sm border border-black text-Dark bg-Light text-sm rounded-full w-full p-2.5"
               placeholder="password"
               v-model="password"
               required
@@ -116,7 +115,7 @@ function open() {
           <div class="mb-6 relative flex">
             <input
               :type="typepassword"
-              class="shadow-sm border border-black text-Dark text-sm rounded-full block w-full p-2.5 focus:ring-0 focus:border-Dark"
+              class="shadow-sm border border-black text-Dark text-sm rounded-full w-full p-2.5"
               placeholder="comfrim password"
               v-model="confrimpassword"
               required
